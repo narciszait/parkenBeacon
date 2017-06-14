@@ -20,9 +20,11 @@
 		EC8048D41EA0B6FB00B259E9 /* Scenario1.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8048D31EA0B6FB00B259E9 /* Scenario1.m */; };
 		EC8048D71EA0B70B00B259E9 /* Scenario2.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8048D61EA0B70B00B259E9 /* Scenario2.m */; };
 		EC8048DA1EA0B71900B259E9 /* Scenario3.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8048D91EA0B71900B259E9 /* Scenario3.m */; };
+		EC8EB15C1EF1E86A00BA51F8 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = EC8EB15B1EF1E86700BA51F8 /* spark.png */; };
 		ECB29FCF1EC246AA00CF78ED /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB29FCE1EC246AA00CF78ED /* CoreLocation.framework */; };
 		ECB29FD31EC2604600CF78ED /* PulsingHaloLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB29FD21EC2604600CF78ED /* PulsingHaloLayer.m */; };
 		ECB29FD51EC4A96600CF78ED /* qr.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ECB29FD41EC4A96600CF78ED /* qr.jpg */; };
+		ECC2EA161EF1E98600135C8F /* ARGame.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC2EA151EF1E98600135C8F /* ARGame.m */; };
 		ECE84E781EAE9B7D0075BC55 /* barcode.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE84E771EAE9B7D0075BC55 /* barcode.png */; };
 /* End PBXBuildFile section */
 
@@ -47,10 +49,13 @@
 		EC8048D61EA0B70B00B259E9 /* Scenario2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scenario2.m; sourceTree = "<group>"; };
 		EC8048D81EA0B71900B259E9 /* Scenario3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scenario3.h; sourceTree = "<group>"; };
 		EC8048D91EA0B71900B259E9 /* Scenario3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scenario3.m; sourceTree = "<group>"; };
+		EC8EB15B1EF1E86700BA51F8 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spark.png; path = "../../../../../Downloads/ARShooter-master/ARViewer/spark.png"; sourceTree = "<group>"; };
 		ECB29FCE1EC246AA00CF78ED /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		ECB29FD11EC2604600CF78ED /* PulsingHaloLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PulsingHaloLayer.h; sourceTree = "<group>"; };
 		ECB29FD21EC2604600CF78ED /* PulsingHaloLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PulsingHaloLayer.m; sourceTree = "<group>"; };
 		ECB29FD41EC4A96600CF78ED /* qr.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = qr.jpg; sourceTree = "<group>"; };
+		ECC2EA141EF1E98600135C8F /* ARGame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARGame.h; sourceTree = "<group>"; };
+		ECC2EA151EF1E98600135C8F /* ARGame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARGame.m; sourceTree = "<group>"; };
 		ECE84E771EAE9B7D0075BC55 /* barcode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barcode.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,7 +107,10 @@
 				EC8048D61EA0B70B00B259E9 /* Scenario2.m */,
 				EC8048D81EA0B71900B259E9 /* Scenario3.h */,
 				EC8048D91EA0B71900B259E9 /* Scenario3.m */,
+				ECC2EA141EF1E98600135C8F /* ARGame.h */,
+				ECC2EA151EF1E98600135C8F /* ARGame.m */,
 				EC4CF4F41E8AD6980018C732 /* Assets.xcassets */,
+				EC8EB15B1EF1E86700BA51F8 /* spark.png */,
 				ECE84E771EAE9B7D0075BC55 /* barcode.png */,
 				ECB29FD41EC4A96600CF78ED /* qr.jpg */,
 				EC4CF4F61E8AD6980018C732 /* LaunchScreen.storyboard */,
@@ -167,7 +175,7 @@
 		EC4CF4DD1E8AD6980018C732 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Narcis Zait";
 				TargetAttributes = {
 					EC4CF4E41E8AD6980018C732 = {
@@ -209,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECB29FD51EC4A96600CF78ED /* qr.jpg in Resources */,
+				EC8EB15C1EF1E86A00BA51F8 /* spark.png in Resources */,
 				EC4CF4F81E8AD6980018C732 /* LaunchScreen.storyboard in Resources */,
 				EC4CF4F51E8AD6980018C732 /* Assets.xcassets in Resources */,
 				ECE84E781EAE9B7D0075BC55 /* barcode.png in Resources */,
@@ -223,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECC2EA161EF1E98600135C8F /* ARGame.m in Sources */,
 				ECB29FD31EC2604600CF78ED /* PulsingHaloLayer.m in Sources */,
 				EC4CF4F01E8AD6980018C732 /* ViewController.m in Sources */,
 				EC4CF4ED1E8AD6980018C732 /* AppDelegate.m in Sources */,
@@ -264,7 +274,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -272,7 +284,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -311,7 +327,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -319,7 +337,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
