@@ -13,6 +13,17 @@
 		EC4CF4F31E8AD6980018C732 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC4CF4F11E8AD6980018C732 /* Main.storyboard */; };
 		EC4CF4F51E8AD6980018C732 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC4CF4F41E8AD6980018C732 /* Assets.xcassets */; };
 		EC4CF4F81E8AD6980018C732 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC4CF4F61E8AD6980018C732 /* LaunchScreen.storyboard */; };
+		EC4CF5001E8AD6DF0018C732 /* JAALEEBeaconSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC4CF4FF1E8AD6DF0018C732 /* JAALEEBeaconSDK.framework */; };
+		EC4CF5031E8AD6F90018C732 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC4CF5021E8AD6F90018C732 /* MobileCoreServices.framework */; };
+		EC4CF5051E8AD7030018C732 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC4CF5041E8AD7030018C732 /* SystemConfiguration.framework */; };
+		EC4CF5071E8AD7A50018C732 /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EC4CF5061E8AD7A50018C732 /* libz.1.dylib */; };
+		EC8048D41EA0B6FB00B259E9 /* Scenario1.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8048D31EA0B6FB00B259E9 /* Scenario1.m */; };
+		EC8048D71EA0B70B00B259E9 /* Scenario2.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8048D61EA0B70B00B259E9 /* Scenario2.m */; };
+		EC8048DA1EA0B71900B259E9 /* Scenario3.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8048D91EA0B71900B259E9 /* Scenario3.m */; };
+		ECB29FCF1EC246AA00CF78ED /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB29FCE1EC246AA00CF78ED /* CoreLocation.framework */; };
+		ECB29FD31EC2604600CF78ED /* PulsingHaloLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB29FD21EC2604600CF78ED /* PulsingHaloLayer.m */; };
+		ECB29FD51EC4A96600CF78ED /* qr.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ECB29FD41EC4A96600CF78ED /* qr.jpg */; };
+		ECE84E781EAE9B7D0075BC55 /* barcode.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE84E771EAE9B7D0075BC55 /* barcode.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +37,21 @@
 		EC4CF4F41E8AD6980018C732 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC4CF4F71E8AD6980018C732 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC4CF4F91E8AD6980018C732 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC4CF4FF1E8AD6DF0018C732 /* JAALEEBeaconSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JAALEEBeaconSDK.framework; sourceTree = "<group>"; };
+		EC4CF5021E8AD6F90018C732 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		EC4CF5041E8AD7030018C732 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		EC4CF5061E8AD7A50018C732 /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = ../../../../../../usr/lib/libz.1.dylib; sourceTree = "<group>"; };
+		EC8048D21EA0B6FB00B259E9 /* Scenario1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scenario1.h; sourceTree = "<group>"; };
+		EC8048D31EA0B6FB00B259E9 /* Scenario1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scenario1.m; sourceTree = "<group>"; };
+		EC8048D51EA0B70B00B259E9 /* Scenario2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scenario2.h; sourceTree = "<group>"; };
+		EC8048D61EA0B70B00B259E9 /* Scenario2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scenario2.m; sourceTree = "<group>"; };
+		EC8048D81EA0B71900B259E9 /* Scenario3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scenario3.h; sourceTree = "<group>"; };
+		EC8048D91EA0B71900B259E9 /* Scenario3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scenario3.m; sourceTree = "<group>"; };
+		ECB29FCE1EC246AA00CF78ED /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		ECB29FD11EC2604600CF78ED /* PulsingHaloLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PulsingHaloLayer.h; sourceTree = "<group>"; };
+		ECB29FD21EC2604600CF78ED /* PulsingHaloLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PulsingHaloLayer.m; sourceTree = "<group>"; };
+		ECB29FD41EC4A96600CF78ED /* qr.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = qr.jpg; sourceTree = "<group>"; };
+		ECE84E771EAE9B7D0075BC55 /* barcode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barcode.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +59,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECB29FCF1EC246AA00CF78ED /* CoreLocation.framework in Frameworks */,
+				EC4CF5071E8AD7A50018C732 /* libz.1.dylib in Frameworks */,
+				EC4CF5051E8AD7030018C732 /* SystemConfiguration.framework in Frameworks */,
+				EC4CF5031E8AD6F90018C732 /* MobileCoreServices.framework in Frameworks */,
+				EC4CF5001E8AD6DF0018C732 /* JAALEEBeaconSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +75,7 @@
 			children = (
 				EC4CF4E71E8AD6980018C732 /* ParkenBeacon */,
 				EC4CF4E61E8AD6980018C732 /* Products */,
+				EC4CF5011E8AD6F90018C732 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,14 +90,24 @@
 		EC4CF4E71E8AD6980018C732 /* ParkenBeacon */ = {
 			isa = PBXGroup;
 			children = (
+				ECB29FD01EC2601500CF78ED /* PulsingHalo */,
 				EC4CF4EB1E8AD6980018C732 /* AppDelegate.h */,
 				EC4CF4EC1E8AD6980018C732 /* AppDelegate.m */,
 				EC4CF4EE1E8AD6980018C732 /* ViewController.h */,
 				EC4CF4EF1E8AD6980018C732 /* ViewController.m */,
 				EC4CF4F11E8AD6980018C732 /* Main.storyboard */,
+				EC8048D21EA0B6FB00B259E9 /* Scenario1.h */,
+				EC8048D31EA0B6FB00B259E9 /* Scenario1.m */,
+				EC8048D51EA0B70B00B259E9 /* Scenario2.h */,
+				EC8048D61EA0B70B00B259E9 /* Scenario2.m */,
+				EC8048D81EA0B71900B259E9 /* Scenario3.h */,
+				EC8048D91EA0B71900B259E9 /* Scenario3.m */,
 				EC4CF4F41E8AD6980018C732 /* Assets.xcassets */,
+				ECE84E771EAE9B7D0075BC55 /* barcode.png */,
+				ECB29FD41EC4A96600CF78ED /* qr.jpg */,
 				EC4CF4F61E8AD6980018C732 /* LaunchScreen.storyboard */,
 				EC4CF4F91E8AD6980018C732 /* Info.plist */,
+				EC4CF4FF1E8AD6DF0018C732 /* JAALEEBeaconSDK.framework */,
 				EC4CF4E81E8AD6980018C732 /* Supporting Files */,
 			);
 			path = ParkenBeacon;
@@ -77,6 +119,26 @@
 				EC4CF4E91E8AD6980018C732 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EC4CF5011E8AD6F90018C732 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ECB29FCE1EC246AA00CF78ED /* CoreLocation.framework */,
+				EC4CF5061E8AD7A50018C732 /* libz.1.dylib */,
+				EC4CF5041E8AD7030018C732 /* SystemConfiguration.framework */,
+				EC4CF5021E8AD6F90018C732 /* MobileCoreServices.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ECB29FD01EC2601500CF78ED /* PulsingHalo */ = {
+			isa = PBXGroup;
+			children = (
+				ECB29FD11EC2604600CF78ED /* PulsingHaloLayer.h */,
+				ECB29FD21EC2604600CF78ED /* PulsingHaloLayer.m */,
+			);
+			name = PulsingHalo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +174,14 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = C5N5BYSRY5;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Wallet = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -138,8 +208,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECB29FD51EC4A96600CF78ED /* qr.jpg in Resources */,
 				EC4CF4F81E8AD6980018C732 /* LaunchScreen.storyboard in Resources */,
 				EC4CF4F51E8AD6980018C732 /* Assets.xcassets in Resources */,
+				ECE84E781EAE9B7D0075BC55 /* barcode.png in Resources */,
 				EC4CF4F31E8AD6980018C732 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,9 +223,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECB29FD31EC2604600CF78ED /* PulsingHaloLayer.m in Sources */,
 				EC4CF4F01E8AD6980018C732 /* ViewController.m in Sources */,
 				EC4CF4ED1E8AD6980018C732 /* AppDelegate.m in Sources */,
+				EC8048D71EA0B70B00B259E9 /* Scenario2.m in Sources */,
 				EC4CF4EA1E8AD6980018C732 /* main.m in Sources */,
+				EC8048DA1EA0B71900B259E9 /* Scenario3.m in Sources */,
+				EC8048D41EA0B6FB00B259E9 /* Scenario1.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,7 +348,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = C5N5BYSRY5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ParkenBeacon",
+				);
 				INFOPLIST_FILE = ParkenBeacon/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.narciszait.ParkenBeacon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -284,7 +365,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = C5N5BYSRY5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ParkenBeacon",
+				);
 				INFOPLIST_FILE = ParkenBeacon/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.narciszait.ParkenBeacon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -310,6 +396,7 @@
 				EC4CF4FE1E8AD6980018C732 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

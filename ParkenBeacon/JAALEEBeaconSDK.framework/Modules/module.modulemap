@@ -1,0 +1,6 @@
+framework module JAALEEBeaconSDK {
+  umbrella header "JAALEEBeaconSDK.h"
+
+  export *
+  module * { export * }
+}
