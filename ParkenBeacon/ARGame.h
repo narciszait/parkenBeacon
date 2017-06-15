@@ -10,8 +10,9 @@
 #import <ARKit/ARKit.h>
 #import <SceneKit/SceneKit.h>
 
-@interface ARGame : UIViewController <ARSCNViewDelegate, SCNPhysicsContactDelegate>
+@interface ARGame : UIViewController <ARSCNViewDelegate, SCNPhysicsContactDelegate, UIGestureRecognizerDelegate>
 @property (weak, nonatomic) IBOutlet ARSCNView *sceneView;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 
 @end
+

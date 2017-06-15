@@ -8,6 +8,7 @@
 
 #import "Scenario3.h"
 #import "PulsingHaloLayer.h"
+#import "ARGame.h"
 
 #define kMaxRadius 200
 #define kMaxDuration 10
@@ -30,7 +31,7 @@
 @property (nonatomic) float dotMinPos;
 @property (nonatomic) float dotRange;
 
-
+@property (nonatomic) bool AROnce;
 
 @end
 
@@ -86,6 +87,8 @@
     UITapGestureRecognizer *tripleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideDebugLabel:)];
     tripleTap.numberOfTapsRequired = 3;
     [self.view addGestureRecognizer:tripleTap];
+    
+    self.AROnce = NO;
 }
 
 -(void)viewDidLayoutSubviews {
@@ -217,11 +220,16 @@
                     break;
                 }
                 case CLProximityNear: {
-                    [UIView animateWithDuration:1.0 animations:^(void) {
-                        self.clueLabel.alpha = 1.0;
-                        self.clueLabel.text = @"Warmer";
-                        self.positionDot.alpha = 1.0;
-                    }];
+//                    [UIView animateWithDuration:1.0 animations:^(void) {
+//                        self.clueLabel.alpha = 1.0;
+//                        self.clueLabel.text = @"Warmer";
+//                        self.positionDot.alpha = 1.0;
+//                    }];
+                    if (!self.AROnce){
+                        ARGame *arGame = [[ARGame alloc] init];
+                        [self.navigationController pushViewController:arGame animated:YES];
+                        self.AROnce = YES;
+                    }
                     break;
                 }
                 case CLProximityImmediate:{
@@ -250,6 +258,8 @@
 }
 
 -(void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:YES];
+    
     [self.beaconManager stopRangingBeaconsInRegion:self.beaconRegionForClue1];
     
     [self.beaconManager stopRangingBeaconsInRegion:self.beaconRegionForClue2];

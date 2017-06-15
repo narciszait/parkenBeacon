@@ -24,7 +24,9 @@
 		ECB29FCF1EC246AA00CF78ED /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB29FCE1EC246AA00CF78ED /* CoreLocation.framework */; };
 		ECB29FD31EC2604600CF78ED /* PulsingHaloLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB29FD21EC2604600CF78ED /* PulsingHaloLayer.m */; };
 		ECB29FD51EC4A96600CF78ED /* qr.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ECB29FD41EC4A96600CF78ED /* qr.jpg */; };
-		ECC2EA161EF1E98600135C8F /* ARGame.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC2EA151EF1E98600135C8F /* ARGame.m */; };
+		ECC2EA1C1EF20C2C00135C8F /* ARGame.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC2EA1A1EF20C2C00135C8F /* ARGame.m */; };
+		ECC2EA1D1EF20C2C00135C8F /* ARGame.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECC2EA1B1EF20C2C00135C8F /* ARGame.xib */; };
+		ECC2EA231EF20FC000135C8F /* Ship.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC2EA221EF20FC000135C8F /* Ship.m */; };
 		ECE84E781EAE9B7D0075BC55 /* barcode.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE84E771EAE9B7D0075BC55 /* barcode.png */; };
 /* End PBXBuildFile section */
 
@@ -54,8 +56,11 @@
 		ECB29FD11EC2604600CF78ED /* PulsingHaloLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PulsingHaloLayer.h; sourceTree = "<group>"; };
 		ECB29FD21EC2604600CF78ED /* PulsingHaloLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PulsingHaloLayer.m; sourceTree = "<group>"; };
 		ECB29FD41EC4A96600CF78ED /* qr.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = qr.jpg; sourceTree = "<group>"; };
-		ECC2EA141EF1E98600135C8F /* ARGame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARGame.h; sourceTree = "<group>"; };
-		ECC2EA151EF1E98600135C8F /* ARGame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARGame.m; sourceTree = "<group>"; };
+		ECC2EA191EF20C2C00135C8F /* ARGame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARGame.h; sourceTree = "<group>"; };
+		ECC2EA1A1EF20C2C00135C8F /* ARGame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARGame.m; sourceTree = "<group>"; };
+		ECC2EA1B1EF20C2C00135C8F /* ARGame.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ARGame.xib; sourceTree = "<group>"; };
+		ECC2EA211EF20FC000135C8F /* Ship.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ship.h; sourceTree = "<group>"; };
+		ECC2EA221EF20FC000135C8F /* Ship.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Ship.m; sourceTree = "<group>"; };
 		ECE84E771EAE9B7D0075BC55 /* barcode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barcode.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,8 +112,11 @@
 				EC8048D61EA0B70B00B259E9 /* Scenario2.m */,
 				EC8048D81EA0B71900B259E9 /* Scenario3.h */,
 				EC8048D91EA0B71900B259E9 /* Scenario3.m */,
-				ECC2EA141EF1E98600135C8F /* ARGame.h */,
-				ECC2EA151EF1E98600135C8F /* ARGame.m */,
+				ECC2EA191EF20C2C00135C8F /* ARGame.h */,
+				ECC2EA1A1EF20C2C00135C8F /* ARGame.m */,
+				ECC2EA1B1EF20C2C00135C8F /* ARGame.xib */,
+				ECC2EA211EF20FC000135C8F /* Ship.h */,
+				ECC2EA221EF20FC000135C8F /* Ship.m */,
 				EC4CF4F41E8AD6980018C732 /* Assets.xcassets */,
 				EC8EB15B1EF1E86700BA51F8 /* spark.png */,
 				ECE84E771EAE9B7D0075BC55 /* barcode.png */,
@@ -216,6 +224,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECC2EA1D1EF20C2C00135C8F /* ARGame.xib in Resources */,
 				ECB29FD51EC4A96600CF78ED /* qr.jpg in Resources */,
 				EC8EB15C1EF1E86A00BA51F8 /* spark.png in Resources */,
 				EC4CF4F81E8AD6980018C732 /* LaunchScreen.storyboard in Resources */,
@@ -232,11 +241,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECC2EA161EF1E98600135C8F /* ARGame.m in Sources */,
+				ECC2EA1C1EF20C2C00135C8F /* ARGame.m in Sources */,
 				ECB29FD31EC2604600CF78ED /* PulsingHaloLayer.m in Sources */,
 				EC4CF4F01E8AD6980018C732 /* ViewController.m in Sources */,
 				EC4CF4ED1E8AD6980018C732 /* AppDelegate.m in Sources */,
 				EC8048D71EA0B70B00B259E9 /* Scenario2.m in Sources */,
+				ECC2EA231EF20FC000135C8F /* Ship.m in Sources */,
 				EC4CF4EA1E8AD6980018C732 /* main.m in Sources */,
 				EC8048DA1EA0B71900B259E9 /* Scenario3.m in Sources */,
 				EC8048D41EA0B6FB00B259E9 /* Scenario1.m in Sources */,
@@ -375,7 +385,7 @@
 					"$(PROJECT_DIR)/ParkenBeacon",
 				);
 				INFOPLIST_FILE = ParkenBeacon/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.narciszait.ParkenBeacon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -392,7 +402,7 @@
 					"$(PROJECT_DIR)/ParkenBeacon",
 				);
 				INFOPLIST_FILE = ParkenBeacon/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.narciszait.ParkenBeacon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
