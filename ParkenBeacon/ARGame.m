@@ -14,6 +14,7 @@
 
 @interface ARGame ()
 @property (nonatomic, strong) Ship *cube;
+@property (nonatomic, strong) SCNNode *ball;
 @end
 
 int score;
@@ -34,7 +35,8 @@ typedef NS_OPTIONS(NSUInteger, CollisionCategory) {
 //    self.sceneView.debugOptions = ARSCNDebugOptionShowWorldOrigin | ARSCNDebugOptionShowFeaturePoints;
     
     SCNScene *scene = [SCNScene new];
-    self.sceneView.scene.physicsWorld.contactDelegate = self;
+//    SCNScene *scene = [SCNScene sceneNamed:@"art.scnassets/ball.dae"];
+    
     self.sceneView.scene = scene;
     self.sceneView.scene.physicsWorld.contactDelegate = self;
     
@@ -47,13 +49,6 @@ typedef NS_OPTIONS(NSUInteger, CollisionCategory) {
     [gestureRecognizers addObject:tapGesture];
     [gestureRecognizers addObjectsFromArray:self.sceneView.gestureRecognizers];
     self.sceneView.gestureRecognizers = gestureRecognizers;
-    
-    UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(goBackToMenu)];
-    [doubleTap setNumberOfTouchesRequired:2];
-    NSMutableArray *tapRecognizers = [NSMutableArray array];
-    [tapRecognizers addObject:doubleTap];
-    [tapRecognizers addObjectsFromArray:self.sceneView.gestureRecognizers];
-    self.sceneView.gestureRecognizers = tapRecognizers;
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -68,11 +63,17 @@ typedef NS_OPTIONS(NSUInteger, CollisionCategory) {
 -(void)addNewShip{
     self.cube = [[Ship alloc] init];
     
+//    self.ball = [SCNNode new];
+//    self.ball = [self.sceneView.scene.rootNode childNodeWithName:@"Football" recursively:YES];
+//    self.ball.scale = SCNVector3Make(0.001, 0.001, 0.001);
+    
     double posX = ((double)arc4random() / ARC4RANDOM_MAX) * (-0.5f - 0.5f) + 0.5f;
     double posY = ((double)arc4random() / ARC4RANDOM_MAX) * (-0.5f - 0.5f) + 0.5f;
     
-    self.cube.position = SCNVector3Make(posX, posY, -1);
+    self.cube.position = SCNVector3Make(posX, posY, -1);    
+//    self.ball.position = SCNVector3Make(posX, posY, -1);
     [self.sceneView.scene.rootNode addChildNode:self.cube];
+//    [self.sceneView.scene.rootNode addChildNode:self.ball];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -82,26 +83,21 @@ typedef NS_OPTIONS(NSUInteger, CollisionCategory) {
 
 -(void)boardTapped:(UIGestureRecognizer*)gestureRecognize
 {
-    
-    // check what nodes are tapped
     CGPoint p = [gestureRecognize locationInView:self.sceneView];
     NSArray *hitResults = [self.sceneView hitTest:p options:nil];
     
     if([hitResults count] > 0){
+        
         SCNHitTestResult *result = [hitResults objectAtIndex:0];
         if(result.node == self.cube){
-            //do something...
-            NSLog(@"ship ship ship");
+            [result.node removeFromParentNode];
+            NSLog(@"ball.scale %f %f %f", self.ball.position.x,self.ball.position.y, self.ball.scale.z);
             score++;
             self.scoreLabel.text = [NSString stringWithFormat:@"%d", score];
             [self checkScore];
         }
     }
 }
-
-//- (void)renderer:(id <SCNSceneRenderer>)renderer updateAtTime:(NSTimeInterval)time{
-//    [self checkScore];
-//}
 
 -(void)checkScore{
     NSLog(@"score: %@", self.scoreLabel.text);
@@ -110,15 +106,8 @@ typedef NS_OPTIONS(NSUInteger, CollisionCategory) {
             self.scoreLabel.text= @"HOT!! Go at the entrance";
             score = 0;
 //        });
-    }
-}
-
--(void)goBackToMenu{
-    NSMutableArray *allViewControllers = [NSMutableArray arrayWithArray:[self.navigationController viewControllers]];
-    for (UIViewController *aViewController in allViewControllers) {
-        if ([aViewController isKindOfClass:[ViewController class]]) {
-            [self.navigationController popToViewController:aViewController animated:NO];
-        }
+    } else {
+        [self addNewShip];
     }
 }
 
@@ -127,16 +116,6 @@ typedef NS_OPTIONS(NSUInteger, CollisionCategory) {
     
     [self.sceneView.session pause];
 }
-
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
 
 @end
 

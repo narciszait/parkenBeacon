@@ -27,6 +27,8 @@
 		ECC2EA1C1EF20C2C00135C8F /* ARGame.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC2EA1A1EF20C2C00135C8F /* ARGame.m */; };
 		ECC2EA1D1EF20C2C00135C8F /* ARGame.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECC2EA1B1EF20C2C00135C8F /* ARGame.xib */; };
 		ECC2EA231EF20FC000135C8F /* Ship.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC2EA221EF20FC000135C8F /* Ship.m */; };
+		ECCFC5E11EF2F9CC00DED5F0 /* FootballBall.scn in Resources */ = {isa = PBXBuildFile; fileRef = ECCFC5E01EF2F9CC00DED5F0 /* FootballBall.scn */; };
+		ECCFC6071EF2FD9600DED5F0 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = ECCFC6061EF2FD9600DED5F0 /* art.scnassets */; };
 		ECE84E781EAE9B7D0075BC55 /* barcode.png in Resources */ = {isa = PBXBuildFile; fileRef = ECE84E771EAE9B7D0075BC55 /* barcode.png */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +63,8 @@
 		ECC2EA1B1EF20C2C00135C8F /* ARGame.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ARGame.xib; sourceTree = "<group>"; };
 		ECC2EA211EF20FC000135C8F /* Ship.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ship.h; sourceTree = "<group>"; };
 		ECC2EA221EF20FC000135C8F /* Ship.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Ship.m; sourceTree = "<group>"; };
+		ECCFC5E01EF2F9CC00DED5F0 /* FootballBall.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = FootballBall.scn; sourceTree = "<group>"; };
+		ECCFC6061EF2FD9600DED5F0 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; name = art.scnassets; path = ../../../ObjectiveCAR/ObjectiveCAR/art.scnassets; sourceTree = "<group>"; };
 		ECE84E771EAE9B7D0075BC55 /* barcode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barcode.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,7 +121,9 @@
 				ECC2EA1B1EF20C2C00135C8F /* ARGame.xib */,
 				ECC2EA211EF20FC000135C8F /* Ship.h */,
 				ECC2EA221EF20FC000135C8F /* Ship.m */,
+				ECCFC6061EF2FD9600DED5F0 /* art.scnassets */,
 				EC4CF4F41E8AD6980018C732 /* Assets.xcassets */,
+				ECCFC5E01EF2F9CC00DED5F0 /* FootballBall.scn */,
 				EC8EB15B1EF1E86700BA51F8 /* spark.png */,
 				ECE84E771EAE9B7D0075BC55 /* barcode.png */,
 				ECB29FD41EC4A96600CF78ED /* qr.jpg */,
@@ -224,6 +230,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECCFC5E11EF2F9CC00DED5F0 /* FootballBall.scn in Resources */,
+				ECCFC6071EF2FD9600DED5F0 /* art.scnassets in Resources */,
 				ECC2EA1D1EF20C2C00135C8F /* ARGame.xib in Resources */,
 				ECB29FD51EC4A96600CF78ED /* qr.jpg in Resources */,
 				EC8EB15C1EF1E86A00BA51F8 /* spark.png in Resources */,
