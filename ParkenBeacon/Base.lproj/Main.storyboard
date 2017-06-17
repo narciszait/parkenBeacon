@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -34,22 +33,30 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qr.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Qcf-LM-jnJ">
                                 <rect key="frame" x="16" y="72" width="343" height="232"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hotdog" translatesAutoresizingMaskIntoConstraints="NO" id="pag-lU-9Ru">
+                                <rect key="frame" x="16" y="405" width="343" height="232"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="pag-lU-9Ru" firstAttribute="top" secondItem="pdU-Ae-glH" secondAttribute="bottom" constant="8" symbolic="YES" id="9j5-zy-u9G"/>
                             <constraint firstItem="pdU-Ae-glH" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ChE-dY-mNB"/>
                             <constraint firstItem="Qcf-LM-jnJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="G3c-16-hTf"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pdU-Ae-glH" secondAttribute="bottom" constant="270" id="MbA-7O-ViM"/>
                             <constraint firstItem="pdU-Ae-glH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="OvC-9A-KD0"/>
+                            <constraint firstItem="pag-lU-9Ru" firstAttribute="trailing" secondItem="pdU-Ae-glH" secondAttribute="trailing" id="T3L-1Y-bsn"/>
                             <constraint firstItem="pdU-Ae-glH" firstAttribute="trailing" secondItem="Qcf-LM-jnJ" secondAttribute="trailing" id="UZV-Qo-nrk"/>
                             <constraint firstItem="pdU-Ae-glH" firstAttribute="top" secondItem="Qcf-LM-jnJ" secondAttribute="bottom" constant="20" id="jBP-Xa-BRI"/>
                             <constraint firstItem="pdU-Ae-glH" firstAttribute="leading" secondItem="Qcf-LM-jnJ" secondAttribute="leading" id="mgt-v9-CmA"/>
+                            <constraint firstItem="pag-lU-9Ru" firstAttribute="leading" secondItem="pdU-Ae-glH" secondAttribute="leading" id="uQK-9s-6hX"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pag-lU-9Ru" secondAttribute="bottom" constant="30" id="w3E-UJ-td4"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Scenario 1" id="nNw-rf-p4a">
                         <barButtonItem key="backBarButtonItem" systemItem="done" id="xGN-C6-0gv"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="hotdogPicture" destination="pag-lU-9Ru" id="aux-MV-fpc"/>
                         <outlet property="qrCodeImageView" destination="Qcf-LM-jnJ" id="HgQ-pQ-E82"/>
                         <outlet property="zoneLabel" destination="pdU-Ae-glH" id="NRI-c6-WQI"/>
                     </connections>
@@ -281,6 +288,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Hotdog" width="250" height="166"/>
         <image name="barcode.png" width="3658" height="1837"/>
         <image name="phone" width="285" height="599"/>
         <image name="qr.jpg" width="290" height="290"/>

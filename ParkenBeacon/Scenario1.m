@@ -10,6 +10,7 @@
 
 @interface Scenario1 ()
 @property (weak, nonatomic) IBOutlet UIImageView *qrCodeImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *hotdogPicture;
 
 @property (nonatomic, strong) JLEBeaconManager  *beaconManager;
 @property (nonatomic, strong) JLEBeaconRegion  *beaconRegion;
@@ -28,22 +29,29 @@
     self.navigationItem.leftBarButtonItem = done;
     
     self.qrCodeImageView.alpha = 0.0;
+    self.hotdogPicture.alpha = 0.0;
     
     self.beaconManager = [[JLEBeaconManager alloc] init];
     self.beaconManager.delegate = self;
     self.beaconManager.avoidUnknownStateBeacons = YES;
     
-    self.beaconRegion = [[JLEBeaconRegion alloc] initWithProximityUUID:JAALEE_PROXIMITY_UUID major:1 minor:2 identifier:kIdentifier];
+    self.beaconRegion = [[JLEBeaconRegion alloc] initWithProximityUUID:ESTIMOTE_UUID major:121 minor:3 identifier:kIdentifier];
     
     self.beaconRegion.notifyOnEntry = YES;
     self.beaconRegion.notifyOnExit = YES;
     
-    [self.beaconManager startMonitoringForRegion:self.beaconRegion];
+    //    [self.beaconManager startMonitoringForRegion:self.beaconRegion];
+    [self.beaconManager startRangingBeaconsInRegion:self.beaconRegion];
 }
 
 -(void)beaconManager:(JLEBeaconManager *)manager didEnterRegion:(JLEBeaconRegion *)region {
+    [UIView animateWithDuration:1.0 animations:^(void) {
+        self.qrCodeImageView.alpha = 1.0;
+        self.hotdogPicture.alpha = 0.0;
+        self.qrCodeImageView.image = [UIImage imageNamed:@"Telia"];
+    }];
     if ([region.identifier isEqualToString:kIdentifier]){
-        [self.beaconManager startRangingBeaconsInRegion:self.beaconRegion];
+        //        [self.beaconManager startRangingBeaconsInRegion:self.beaconRegion];
         region.notifyOnEntry = YES;
         
         UILocalNotification *notification = [[UILocalNotification alloc] init];
@@ -51,6 +59,8 @@
         notification.alertBody = @"Welcome to Telia Parken!";
         [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
         
+        
+        self.zoneLabel.text = @"Welcome to Telia Parken!";
         NSLog(@"inside 2");
     }
 }
@@ -58,12 +68,13 @@
 -(void)beaconManager:(JLEBeaconManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(JLEBeaconRegion *)region {
     [self.beaconManager startMonitoringForRegion:self.beaconRegion];
     if ([region.identifier isEqualToString:kIdentifier]) {
+        //        [self.beaconManager startMonitoringForRegion:self.beaconRegion];
         if (beacons.count != 0) {
             JLEBeacon *temp = [beacons firstObject];
-    
+            
             switch (temp.proximity) {
                 case CLProximityFar: {
-                    self.zoneLabel.text = @"Far";
+                    self.zoneLabel.text = @"Welcome to Telia Parken!";
                     break;
                 }
                 case CLProximityNear: {
@@ -71,11 +82,12 @@
                     break;
                 }
                 case CLProximityImmediate: {
-                    self.zoneLabel.text = @"Immediate";
+                    self.zoneLabel.text = @"Welcome to Telia Parken!";
                     break;
                 }
                 default: {
-                    self.zoneLabel.text = @"";
+                    //                    self.zoneLabel.text = @"unknown";
+                    [self beaconManager:self.beaconManager didExitRegion:self.beaconRegion];
                     break;
                 }
             }
@@ -94,7 +106,9 @@
     self.zoneLabel.text = @"As a loyal football fan, we would like to offer you 20 DKK discount on any food purchase";
     
     [UIView animateWithDuration:1.0 animations:^(void) {
+        self.qrCodeImageView.image = [UIImage imageNamed:@"qr"];
         self.qrCodeImageView.alpha = 1.0;
+        self.hotdogPicture.alpha = 1.0;
     }];
     
     [self.beaconManager stopRangingBeaconsInRegion:self.beaconRegion];
@@ -115,3 +129,4 @@
 
 
 @end
+

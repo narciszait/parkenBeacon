@@ -27,14 +27,14 @@
     // Do any additional setup after loading the view.
     UIBarButtonItem *done = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneButtonTapped:)];
     self.navigationItem.leftBarButtonItem = done;
-
+    
     self.ticketValid = NO;
     
     self.beaconManager = [[JLEBeaconManager alloc] init];
     self.beaconManager.delegate = self;
     self.beaconManager.avoidUnknownStateBeacons = YES;
     
-    self.beaconRegion = [[JLEBeaconRegion alloc] initWithProximityUUID:JAALEE_PROXIMITY_UUID major:1 minor:2 identifier:kIdentifier];
+    self.beaconRegion = [[JLEBeaconRegion alloc] initWithProximityUUID:ESTIMOTE_UUID major:121 minor:3 identifier:kIdentifier];
     
     self.beaconRegion.notifyOnEntry = YES;
     self.beaconRegion.notifyOnExit = YES;
@@ -103,3 +103,4 @@
 }
 
 @end
+
