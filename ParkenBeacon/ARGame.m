@@ -34,8 +34,8 @@ typedef NS_OPTIONS(NSUInteger, CollisionCategory) {
     self.sceneView.autoenablesDefaultLighting = YES;
 //    self.sceneView.debugOptions = ARSCNDebugOptionShowWorldOrigin | ARSCNDebugOptionShowFeaturePoints;
     
-    SCNScene *scene = [SCNScene new];
-//    SCNScene *scene = [SCNScene sceneNamed:@"art.scnassets/ball.dae"];
+//    SCNScene *scene = [SCNScene new];
+    SCNScene *scene = [SCNScene sceneNamed:@"art.scnassets/ball.dae"];
     
     self.sceneView.scene = scene;
     self.sceneView.scene.physicsWorld.contactDelegate = self;
@@ -61,19 +61,19 @@ typedef NS_OPTIONS(NSUInteger, CollisionCategory) {
 }
 
 -(void)addNewShip{
-    self.cube = [[Ship alloc] init];
+//    self.cube = [[Ship alloc] init];
     
-//    self.ball = [SCNNode new];
-//    self.ball = [self.sceneView.scene.rootNode childNodeWithName:@"Football" recursively:YES];
-//    self.ball.scale = SCNVector3Make(0.001, 0.001, 0.001);
+    self.ball = [SCNNode new];
+    self.ball = [self.sceneView.scene.rootNode childNodeWithName:@"Football" recursively:YES];
+    self.ball.scale = SCNVector3Make(0.001, 0.001, 0.001);
     
-    double posX = ((double)arc4random() / ARC4RANDOM_MAX) * (-0.5f - 0.5f) + 0.5f;
-    double posY = ((double)arc4random() / ARC4RANDOM_MAX) * (-0.5f - 0.5f) + 0.5f;
+    double posX = ((double)arc4random() / ARC4RANDOM_MAX) * (0.0f - 0.5f) + 0.5f;
+    double posY = ((double)arc4random() / ARC4RANDOM_MAX) * (0.0f - 0.5f) + 0.5f;
     
-    self.cube.position = SCNVector3Make(posX, posY, -1);    
-//    self.ball.position = SCNVector3Make(posX, posY, -1);
-    [self.sceneView.scene.rootNode addChildNode:self.cube];
-//    [self.sceneView.scene.rootNode addChildNode:self.ball];
+//    self.cube.position = SCNVector3Make(posX, posY, -1);
+    self.ball.position = SCNVector3Make(posX, posY, -1);
+//    [self.sceneView.scene.rootNode addChildNode:self.cube];
+    [self.sceneView.scene.rootNode addChildNode:self.ball];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -89,7 +89,7 @@ typedef NS_OPTIONS(NSUInteger, CollisionCategory) {
     if([hitResults count] > 0){
         
         SCNHitTestResult *result = [hitResults objectAtIndex:0];
-        if(result.node == self.cube){
+        if(result.node == self.ball){
             [result.node removeFromParentNode];
             NSLog(@"ball.scale %f %f %f", self.ball.position.x,self.ball.position.y, self.ball.scale.z);
             score++;
@@ -101,7 +101,7 @@ typedef NS_OPTIONS(NSUInteger, CollisionCategory) {
 
 -(void)checkScore{
     NSLog(@"score: %@", self.scoreLabel.text);
-    if (score == 5){
+    if (score == 1){
 //        dispatch_async(dispatch_get_main_queue(), ^{
             self.scoreLabel.text= @"HOT!! Go at the entrance";
             score = 0;
