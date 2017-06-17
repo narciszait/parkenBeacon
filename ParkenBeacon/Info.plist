@@ -27,6 +27,10 @@
 	</dict>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>The app needs location to run</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>iBeacons need location</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>iBeacons need location</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>bluetooth-central</string>
